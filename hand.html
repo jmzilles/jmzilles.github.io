@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ Prosthetic</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/home.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>Prosthetic Hand - Bioprinting @ Berkeley<br>Last Updated 5/1/2022</h2>
+      <p>This currently active project was started with the Bioprinting @ Berkeley 
+        club in Spring of 2022. The goal of the project is to create a visually 
+        realistic prosthetic hand/arm that also has meaningful bionic functionality. 
+        We will then partner with the remainder of the bioprinting club to create 
+        and attach a skin-like layer to the arm, which will hypothetically help to 
+        integrate sensory capabilities.
+      </p>
+    <div class="slideshow">
+      <img src="images/hand/hand1.jpg" alt="Image 1" class="active">
+      <img src="images/hand/hand2.JPG" alt="Image 2">
+      <img src="images/hand/hand3.jpg" alt="Image 3">
+      <img src="images/hand/hand4.jpg" alt="Image 4">
+      <img src="images/hand/hand5.jpg" alt="Image 5">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+      <p>This project is still in its prototyping phase. I designed a four 
+        finger hand and palm for basic testing, then 3D printed it out of 
+        PLA and finished the construction with nylon string, servo motors, 
+        and an aurduino. This was our first moving prototype and while it 
+        was a success, there is still much more work to be done. Next steps 
+        include a redesign for efficiency, adding a thumb, and connecting 
+        sensors to trigger motion based on muscle contractions.</p>
+        <div style="text-align: center; font-size: 30px;">
+          <a href="files/hand.pdf" target="_blank">View PDF</a>
+        </div>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2022</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+
