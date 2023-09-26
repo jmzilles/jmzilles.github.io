@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ Expanding Table</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/index.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>Expanding Coffee Table</h2>
+      <p>This was a project for a mechanical engineering product design class at Berkeley. My 
+        team elected to design and prototype a coffee table that could expand into a full-sized 
+        dining table. Over the course of a semester, we designed, analyzed, iterated, prototyped, 
+        built, and presented our table.
+      </p>
+    <div class="slideshow">
+      <img src="images/table/table1.jpeg" alt="Image 1" class="active">
+      <img src="images/table/table2.jpeg" alt="Image 2">
+      <img src="images/table/table3.jpeg" alt="Image 3">
+      <img src="images/table/table4.jpeg" alt="Image 4">
+      <img src="images/table/table5.png" alt="Image 5">
+      <img src="images/table/table6.png" alt="Image 6">
+      <img src="images/table/table9.png" alt="Image 7">
+      <img src="images/table/table10.png" alt="Image 8">
+      <img src="images/table/table11.JPG" alt="Image 9">
+      <img src="images/table/table12.JPG" alt="Image 10">
+      <img src="images/table/table13.JPG" alt="Image 11">
+      <img src="images/table/table14.JPG" alt="Image 12">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+    <h2>Background</h2>
+    <p>Our goal was to create a functional prototype for a table with the capacity to become 
+      both a coffee table and a full-sized dining table, primarily targeting college students and 
+      city-dwelling consumers living in small apartments. We emphasized ease of transport, ease 
+      of use, style, and affordability. We performed market research, learning that the average 
+      American under 40 will move 8 times in their life, the average living space per capita in 
+      cities is 292 sq ft, and the global small space furniture market is expected to grow 6% year 
+      over year. We observed our competitors in the space, noting that existing products were either 
+      impractical, flimsy and cheap, or too expensive for our target customers. Because of this 
+      research, we decided to focus on the following features in this order: usability (ease of 
+      use, ability to expand/contract), cost for consumer, style (desirable visual appearance), 
+      ease of assembly, and transportability. Our team made a business model canvas to determine 
+      key partners, activities, and resources, as well as customer relationships and advertisement 
+      channels.</p>
+  <h2>Design</h2>
+      <p>As a team, we conducted market research by interviewing college students and decided on the 
+        following specifications to design off of: the weight had to be 50lbs or less, the optimal 
+        dimensions of the coffee table were 15x36x24in, with the full expanded height being 28-30in, 
+        the cost to consumer had to be $100-200, the minimum load capability should be 250lbs, and the 
+        transition time between coffee and dining table needed to be under 5 minutes. We brainstormed 
+        over 50 potential designs then used a concept selection matrix to narrow it down to two. We 
+        then combined the best aspects of these designs and had a starting point. I completed several 
+        iterations of CAD using Solidworks, creating a table that utilized sliding rails to raise the 
+        legs of the table, increasing the height. The coffee table legs were three pieces, with two 
+        sliding across each other to expand vertically and one rotating out to extend the length of 
+        the table. The legs were held in the extended position by pins and the arms were supported by 
+        internal beams, which could easily be positioned from the outside in one smooth motion. For 
+        aesthetic purposes, rounded pieces were added in the corners, hiding the necessary cutout. 
+        After designing, we used Solidworks simulations to conduct FEA, testing how much weight the 
+        table would be able to hold in both configurations. After successful results, we moved to 
+        prototyping.</p>
+    <h2>Prototyping</h2>
+        <p>To prototype this table, I first 3D printed all of the parts at 1/4 scale. This method of 
+          rapid prototyping both minimized the time needed to finish a prototype and cut down on the 
+          cost. I used FDM printing for the large components and SLA for the more precise pieces. I also 
+          had to calculate the different tolerances required for the 3D printed parts. After printing 
+          and assembling the table, all functions were working as designed, so the second prototype was 
+          started. This was a full-size plywood prototype, with aluminum extrusion beams and aluminum 
+          pins. Plywood was chosen due to its low cost, as this prototype was self-funded. MDF would have 
+          been the preferred choice. Plywood was cut using a CNC mill, and two layers of 0.75” plywood 
+          were layered together after milling to create the internal components. This prototype had many 
+          flaws, but it was functional and a good demonstration of the concept and the design. We 
+          presented this prototype and received a high grade on the project.</p>
+      <h2>Reflection</h2>
+          <p>This project was a great experience for product design and CNC milling. The project took me 
+            through the background of coming up with a product and all of the analysis that happens 
+            before anything is designed, such as market research. There was also a large amount of 
+            problem solving that this project allowed me to perform. During manufacturing of the 
+            prototype we had a finite amount of plywood to work with and when pieces were improperly 
+            cut or not lining up correctly, I had to come up with solutions quickly. A few small redesigns
+            were required to aid the final prototype in coming together, but in the end, we were 
+            successful in finishing the prototype on time. There is obvious room for improvement in this 
+            product, but the project overall was a success.</p>
+    <div style="text-align: center; font-size: 30px;">
+      <a href="files/table_report.pdf" target="_blank">View Project Report</a>
+      <a href="files/table_presentation.pdf" target="_blank">View Presentation</a>
+    </div>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+

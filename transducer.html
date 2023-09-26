@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ Transducer</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/index.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>Ultrasound Transducer</h2>
+      <p>This was a class project for an industrial design class focused on designing for human 
+        factors. Teams were given an occupation that had far higher than average cases of work-related 
+        musculoskeletal disorders (WRMSDs) and were tasked with changing one or more aspects of that 
+        occupation to minimize the risk. My team was assigned to re-design the medical ultrasound 
+        process, and we decided to change the shape of the transducer to be more ergonomic. This 
+        change would not only help minimize hand and wrist injuries, but the improved shape would 
+        affect posture and help the entire body of a monographer avoid repetitive use injuries.
+      </p>
+    <div class="slideshow">
+      <img src="images/transducer/transducer1.JPG" alt="Image 1" class="active">
+      <img src="images/transducer/transducer2.PNG" alt="Image 2">
+      <img src="images/transducer/transducer3.PNG" alt="Image 3">
+      <img src="images/transducer/transducer4.jpg" alt="Image 4">
+      <img src="images/transducer/transducer5.jpeg" alt="Image 5">
+      <img src="images/transducer/transducer6.jpeg" alt="Image 6">
+      <img src="images/transducer/transducer7.jpeg" alt="Image 7">
+      <img src="images/transducer/transducer0.png" alt="Image 8">
+      <img src="images/transducer/transducer9.jpeg" alt="Image 9">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+    <h2>Background</h2>
+    <p>The prevalence of work-related musculoskeletal disorders in medical ultrasound professionals 
+      is a significant issue, impacting their health, productivity, diagnostic quality, and healthcare 
+      sustainability. WRMSDs, such as carpal tunnel syndrome, tendinitis, and back pain, affect up to 
+      90% of ultrasound professionals due to factors like high workloads and inadequate equipment design, 
+      necessitating urgent ergonomic improvements. Addressing these challenges can enhance their 
+      well-being, reduce healthcare costs, and improve patient satisfaction. Research indicates that most 
+      ultrasound professionals experience WRMSD symptoms due to factors like heavy workloads and poor 
+      equipment design, emphasizing the need for better ergonomics to prevent pain and injuries. WRMSDs 
+      decrease work quality and productivity, resulting in absenteeism, turnover, and increased treatment 
+      costs. Ergonomic solutions can improve professionals' health, patient satisfaction, and healthcare 
+      sustainability. Ergonomically designed equipment improves image quality and diagnostic accuracy, 
+      enhancing patient care and overall healthcare quality.
+      <br><br>
+      Medical ultrasound involves emitting high-frequency sound waves into the body, with echoes used 
+      to create images. It's vital for diagnosing conditions, including pelvic, abdominal, obstetric, 
+      brain, hip, and heart evaluations, as well as guiding biopsies without using radiation. Our team 
+      focused on pregnancy ultrasounds to address specific pain points. The process involves preparing 
+      the transducer, applying the gel, positioning it on the skin, transmitting ultrasound waves, 
+      receiving echoes, processing information, interpreting results, and reporting to healthcare 
+      providers. Ultrasound information flows from the transducer to real-time monitor images, assessing 
+      organs, tissues, blood flow, and fetuses during pregnancy. Feedback can come from patients directly 
+      or through physicians. Ultrasound tasks are performed in healthcare settings, usually dimly lit 
+      rooms, respecting patients' privacy. Exam rooms are often small, limiting ergonomic positioning, 
+      and portable exams may require awkward movements. Historically, ultrasound technology focused on 
+      imaging capabilities. Recent developments include cordless transducers, adjustable monitors, and 
+      ergonomic chairs, but ergonomic education remains inadequate.</p>
+  <h2>Design</h2>
+      <p>Before beginning the design process, I contacted over 20 sonographers of varying demographics 
+        and experience to learn about what problems were being experienced in the real world. From this 
+        research, I not only learned the specific injuries, most uncomfortable procedures, and largest 
+        desires for change of these monographers, but I also learned how widespread this issue truly was 
+        and how desperate these people were for any innovation. With this in mind, my team set our 
+        parameters for design to include eye height, reach, hand size, pinch grip capacity, and 
+        cylindrical power grip capacity. With the exception of eye height, we planned to accommodate 
+        the 95th percentile male and 5th percentile female, and we found our target values through 
+        available anthropometric data. We researched existing solutions, which above all were impractical 
+        for the majority of monographers due to cost. Our team began brainstorming solutions and came up 
+        with several changes that would make a direct impact in minimizing WRMSDs. For the sake of the 
+        project, we elected to pursue a redesign of ultrasound transducers. We drew potential redesigns, 
+        discussing and iterating until we had a final idea. I then used Fusion 360 to CAD the design, 
+        continuing to iterate along the way. Our new design had a curved handle that would transition 
+        the current pinch grip into a power grip, reducing the force on fingers and wrists. The new 
+        design also changed how force was applied, improving elbow, shoulder, and back posture.</p>
+    <h2>Prototyping</h2>
+        <p>To prototype the new design, I used FDM 3D printing. For this project, feel was a very 
+          important aspect. Because of this, I made a variety of changes to the CAD after I had a 
+          prototype in my hands. I changed the location of the control buttons and dial to ensure 
+          they were comfortable to use and also fit with the anthropometric data. The design was 
+          also adjusted for the ulnar side of the palm to be able to lay flat on the transducer. 
+          In the end, I had a transducer that was far more comfortable to hold than existing models, 
+          and based on movement diagrams would minimize WRMSDs.</p>
+      <h2>Reflection</h2>
+          <p>My favorite part of this project was connecting with industry professionals who were 
+            experiencing the problems we were attempting to solve. I enjoyed learning from those who 
+            had first-hand experience, versus going strictly off of internet information. This made 
+            the project feel more personal and made me want to perform and design better. I also liked 
+            gaining practice with combining functional and aesthetic design. Overall, while this 
+            project might not have been too mechanically challenging to design, it was a great 
+            introduction to industrial design.</p>
+    <div style="text-align: center; font-size: 30px;">
+      <a href="files/transducer.pdf" target="_blank">View Project Report</a>
+    </div>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+

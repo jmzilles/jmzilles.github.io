@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ CADathon</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/index.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>UC Berkeley CADathon - Spring 2023</h2>
+      <p>This was the first ever CADathon put on by the American Society of Mechanical 
+        Engineers at UC Berkeley. The format resembled a hackathon, with teams of 2-4 
+        being given a design prompt and 12 hours to CAD and make a portfolio based on 
+        a design prompt. I entered this competition with my partner, Meta Zhou.
+      </p>
+    <div class="slideshow">
+      <img src="images/cadathon/cadathon1.jpg" alt="Image 1" class="active">
+      <img src="images/cadathon/cadathon2.JPG" alt="Image 2">
+      <img src="images/cadathon/cadathon3.JPG" alt="Image 3">
+      <img src="images/cadathon/cadathon4.JPG" alt="Image 4">
+      <img src="images/cadathon/cadathon5.JPG" alt="Image 5">
+      <img src="images/cadathon/cadathon6.JPG" alt="Image 6">
+      <img src="images/cadathon/cadathon7.JPG" alt="Image 7">
+      <img src="images/cadathon/cadathon8.JPG" alt="Image 8">
+      <img src="images/cadathon/cadathon9.JPG" alt="Image 9">
+      <img src="images/cadathon/cadathon10.JPG" alt="Image 10">
+      <img src="images/cadathon/cadathon11.JPG" alt="Image 11">
+      <img src="images/cadathon/cadathon12.JPG" alt="Image 12">
+      <img src="images/cadathon/cadathon13.JPG" alt="Image 13">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+    <h2>Background</h2>
+    <p>The prompt that was revealed at the beginning of the event was to design an autonomous 
+      robot to clean a conference room table in a space hotel rocket. The robot needed to clean 
+      all foreign elements, solid and liquid, and because we chose the more advanced challenge, 
+      also had to ignore obstacles like notebooks, laptops, and other elements that should not 
+      be touched. In addition, the robot had to secure itself for takeoff and landing.</p>
+  <h2>Design</h2>
+      <p>Meta and I went back and forth on potential designs, eventually deciding on a roomba-type 
+        robot that would descend from the ceiling. Under the team name “Cookie Jar Robotics” (after 
+        the only food we brought to sustain ourselves), we began sketching a robot based off of the 
+        golden ratio. We outlined clear design considerations, then divided the necessary functions 
+        into a sequence of steps. For object identification, a ceiling mounted camera with an object 
+        recognition AI locates and determines objects on the table that need to be avoided, 
+        communicating this with the robot. The robot is lowered onto the table via three pulleys 
+        with electromagnets, which disarm and release the robot before ascending back to the ceiling. 
+        The robot rounds the table, using a retracting sweeping arm to push any loose trash into its 
+        removable waste bin. Next, the robot circles the table with its vacuum, located opposite the 
+        sweeping arm, picking up any loose dust and crumbs. The vacuum motor and fan, tubing, opening, 
+        air vent, and dust compartment have all been planned out. The next step is the wiping arm and 
+        cleaning spray, which pick up any remaining dust, crumbs, liquids, and any other unwanted 
+        substances. Finally, the sanitizing arm runs over the entire table, ensuring no sticky residues 
+        and a clean feeling. All arms on the robot are capable of retracting, and the robot has 
+        independently controlled wheels to allow for rotation about its center axis and coverage of 
+        the entire table.</p>
+    <h2>Reflection</h2>
+        <p>While we unfortunately did not win the CADathon competition, we learned valuable lessons 
+          for the next one. Primarily, we discovered that the portfolio was graded with more weight 
+          than the CAD. We spent a disproportionate amount of time thinking through the design process 
+          and modeling the robot compared to writing the report. This is a lesson on communication, 
+          as it does not matter how good your idea is if you are unable to explain it to others. While 
+          we were proud of our idea, our presentation could have been improved. Based on the grades 
+          given by the judges, our only other area in need of major improvement was our 
+          manufacturability. This was something we neglected to focus on in favor of well thought out 
+          robotic processes, but something we will be sure to focus on in future competitions.</p>
+    <div style="text-align: center; font-size: 30px;">
+      <a href="files/cadathon.pdf" target="_blank">View Project Report</a>
+    </div>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+

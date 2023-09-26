@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ Medical Device</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/index.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>Medical Device - Arch Day Design</h2>
+      <p>This is a project I worked on with engineering consulting company 
+        in Ventura, CA. The company does mostly medical device design for 
+        industry clients. This was my first experience with this type of 
+        engineering, and since then I have been very interested in working 
+        on designing to improve human lives.
+      </p>
+    <div class="slideshow">
+      <img src="images/arch/arch1.jpg" alt="Image 1" class="active">
+      <img src="images/arch/arch2.jpg" alt="Image 2">
+      <img src="images/arch/arch4.jpg" alt="Image 4">
+      <img src="images/arch/arch5.jpg" alt="Image 5">
+      <img src="images/arch/arch6.jpg" alt="Image 6">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+    <h2>Background</h2>
+    <p>Arch Day Design hired me to work as a manufacturing and quality engineer 
+      for their regulated medical device project. The product was a cup for people 
+      with disabilities that impacted swallowing liquids. The cup would dispense 
+      a set amount of liquid, usually 5 or 10cc. This was a redesign for a company 
+      that has a similar product, but wanted an updated model that would allow users 
+      to be less self-conscious about needing the device by disguising the internal 
+      workings. By hiring me, Arch Day was able to save their client thousands of 
+      dollars, as I was capable of providing the necessary 3D printed models at a 
+      fraction of the price that Arch Day could.</p>
+  <h2>Design</h2>
+      <p>While I was not in a lead design role for this project, I suggested changes 
+        for ease of manufacturing, which, at the time, was FDM 3D printing. I worked 
+        with the owner of Arch Day on positioning of the handle, as well as debossing 
+        the text on the lid, and others.</p>
+    <h2>Manufacturing</h2>
+        <p>As the head of manufacturing during the prototyping phase, I was in charge 
+          of 3D printing all of our models and helping ship them across the US to the 
+          rest of the team. I worked with my two personal FDM 3D printers to quickly 
+          turn around the models, running my printers constantly. With every variation, 
+          I optimized the slicing process to improve print speed, quality, and 
+          impermeability. Each model was printed in two parts, the lid and the cup, 
+          with each of these prints requiring custom supports to be feasibly printed. 
+          <br><br>This project, and working for Arch Day, was the single most educational 
+          engineering experience I had up to that point. It greatly furthered my 
+          understanding of design and manufacturing, and improved my CAD, slicing, and 
+          3D printing skills. Most importantly, I felt good knowing that my work was a 
+          direct factor in helping people.</p>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+

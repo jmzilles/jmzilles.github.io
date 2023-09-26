@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JMZ Stryker</title>
+    <style>
+      .slideshow {
+        position: relative;
+        height: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        height: 600px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .slideshow .active {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .slideshow .prev,
+      .slideshow .next {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+      }
+
+      .slideshow .prev:hover,
+      .slideshow .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .slideshow .prev {
+        left: 0;
+      }
+
+      .slideshow .next {
+        right: 0;
+      }
+
+      .slideshow .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+      <header class="header">
+        <div class="header-title">Jackson Zilles</div>
+        <div class="header-links">
+          <style>
+            a {
+              text-decoration: none;
+              margin: 0 10px;
+              font-family: "Courier New", Courier, monospace;
+              font-weight: 20;
+              color: black;
+            }
+          </style>
+          <a href="/index.html">Projects</a>
+          <a href="/design.html">Design</a>
+          <a href="/about.html">About</a>
+        </div>
+      </header>
+      <hr>
+      <h2>Stryker</h2>
+      <p>In the summer of 2023, I completed an internship with Stryker Sports Medicine in 
+        San Jose, CA as an R&D intern. I had the opportunity to work on the designing, 
+        prototyping, and testing processes of multiple surgical devices in all stages of 
+        development. I was lucky to be able to collaborate with many different teams and 
+        engineers and complete meaningful work toward the development and release of products 
+        for Stryker. I worked at a high level both hands-on and digitally, using machine 
+        shop tools and polymer 3D printing, operating in mock surgical conditions, utilizing 
+        Solidworks and Solidworks PDM to create complex CAD files and assemblies, and working 
+        with both legacy and new designs.
+      </p>
+    <div class="slideshow">
+      <img src="images/stryker/stryker2.jpeg" alt="Image 1" class="active">
+      <img src="images/stryker/stryker3.jpg" alt="Image 2">
+      <img src="images/stryker/stryker4.jpg" alt="Image 3">
+      <img src="images/stryker/stryker5.jpg" alt="Image 4">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+      <div class="description">x</div>
+    </div>
+    <p style="text-align: center;">Images above include Stryker products</p>
+    <h2>Projects Summary</h2>
+    <p>Over three months, I worked primarily on four projects, two of which were 
+      centered on new product design. The first was a snap-on fixture that could be optionally 
+      added to a production surgical device, with the need for this product coming from surgeon 
+      feedback and competitor products in the market. The second new product design project was a 
+      ground-up project of a new surgical tool. I worked as the lead designer for this product, 
+      working with the marketing department as I designed and prototyped. The other two projects 
+      I worked on were product development testing. One of these products was in the late stages 
+      of development, getting ready for release, and the other was a product in the early stages, 
+      starting testing.</p>
+  <h2>Product Design</h2>
+      <p><i>Snap-on Fixture</i></p>
+      <p>As a medical devices company, Stryker is always innovating and iterating 
+        their surgical tools based on new research, new surgeon needs, and new technologies, all 
+        focused on creating easier, more successful surgeries. While this often means creating new 
+        products to replace old offerings, occasionally changes can be made to products through 
+        external additions. I was tasked with designing, prototyping, and testing a snap-on fixture 
+        for a line of products that would increase their usage capabilities. Using primarily Solidworks 
+        and GD&T, I designed a variety of snap-on fixtures that would have the physical properties 
+        necessary to achieve the desired results. Through iteration and prototyping using an inkjet 
+        3D printer, I made and tested multiple different options with a wide range of shapes. Through 
+        this iteration process, I was able to pinpoint the most effective design for the desired results, 
+        and through testing confirmed adequate, repeatable data. As a result, the snap-on fixture that 
+        I designed began usage for the testing process that the product is undergoing. This fixture will 
+        allow the product to have expanded use cases and increased safety. 
+      </p>  
+      <p><i>New Surgical Device</i></p>
+      <p>As previously stated, Stryker is constantly developing new products to improve performance and 
+        fill gaps in existing product lines. Stryker was looking to expand one of these product lines 
+        based on a specific type of surgery, in which the current products were working, but could be 
+        better. I took on the design project as the lead and began by researching the existing products 
+        and the desired surgery to understand where the shortcomings were and what could be improved. 
+        I also received marketing’s desires for the product’s design and features. Using this information, 
+        I used Solidworks to create a multi-piece assembly of the new product. This assembly had to have 
+        a cover piece that could slide in and out of place easily but never fall off. I also had to 
+        design within the existing silhouette of a product so that the new product would feel familiar 
+        to surgeons and would fit in existing packaging. The largest constraint was the force requirement, 
+        as the device had to be capable of withstanding multiple sharp blows. After finishing the CAD, I 
+        used an inkjet 3D printer to prototype the product, then completed other assembly through the 
+        dismantling of similar products and pieced together a working prototype. With this prototype, I 
+        performed testing in a mock surgical environment and from my results, I returned to my CAD to 
+        iterate and improve. After a few cycles of prototyping, testing, and iterating, the product was 
+        delivered to marketing. As a surgical device, there will be many levels of testing and design 
+        modifications before this product reaches the market. However, the first steps are complete and due 
+        to the need for this product, it will likely hit the market in the upcoming years.</p>
+  <h2>Product Development Testing</h2>
+      <p><i>Near Market</i></p>
+      <p>An updated product of one of Stryker’s more important lines is nearing release, and some final 
+        testing still needed to be done. Over the course of my internship, I spent hours assembling these 
+        devices for testing and also ran tests. While assembly can often be seen as simply manual labor, 
+        it was a good learning experience about designing for assembly. These devices had to be assembled 
+        in a factory before being shipped out to surgeons, so the better they were designed, the faster 
+        and easier they could be assembled, minimizing errors. Through assembling these products, I 
+        learned about tools for assembly that Stryker uses and also design additions that can help 
+        assembly. The tests I ran were primarily UTS tests using hand-held force gauges and an Instron. 
+        In a multi-piece device such as this one, it was interesting to learn about options for testing 
+        and how to test specific pieces to failure. The data I collected from my testing was constantly 
+        recorded and compiled with all test data from the product and affected design changes and product 
+        specifications.
+      </p>  
+      <p><i>Early Development</i></p>
+      <p>I led the first rounds of material testing for a new product in early development. After 
+        receiving samples of the product in two different materials, I used the spec. sheet to check 
+        whether the product was within the dimensions ordered. I then tested the two materials in a mock 
+        surgical environment, specifically watching material wear over a number of cycles. At constant 
+        intervals, I used a Keyence imaging system to view the product at high magnification and measure 
+        the changes in dimensions due to wear. Overall, I completed this testing for three separate 
+        materials with products from two separate production lines and under two different sets of 
+        conditions, coming out to a total of five rounds of testing. I recorded all of my data both 
+        manually and digitally and wrote a testing report at the end of every set of tests, sharing the 
+        report with all engineers involved in the product. Based on my testing, a material was chosen for 
+        its superior performance, and the two sets of conditions were proven to both be safe for the usage 
+        of the product.
+      </p>
+      <h2>Reflection</h2>
+          <p>My time at Stryker helped greatly to develop my design and engineering skills. I’m very 
+            grateful to my team for their help throughout my internship and the friendships I made. My 
+            favorite project was designing a new surgical device from the ground up and I enjoyed every 
+            failure and learning experience along the way.</p>
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      const prev = document.querySelector(".slideshow .prev");
+      const next = document.querySelector(".slideshow .next");
+      const description = document.querySelector(".slideshow .description");
+      let current = 0;
+
+      function updateSlideshowSize() {
+        const activeImage = images[current];
+        const aspectRatio = activeImage.width / activeImage.height;
+        const width = aspectRatio * 600;
+        slideshow.style.width = `${width}px`;
+      }
+
+      prev.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current--;
+        if (current < 0) {
+          current = images.length - 1;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      next.addEventListener("click", function() {
+        images[current].classList.remove("active");
+        current++;
+        if (current >= images.length) {
+          current = 0;
+        }
+        images[current].classList.add("active");
+        description.innerHTML = images[current].alt;
+        updateSlideshowSize();
+      });
+
+      window.addEventListener("load", updateSlideshowSize);
+      window.addEventListener("resize", updateSlideshowSize);
+    </script>
+    <hr>
+  </body>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+        <ul>
+          <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+</div>
+</html>
+
