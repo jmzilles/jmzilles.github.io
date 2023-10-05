@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JMZ Design Blog</title>
+        <style>
+          .slideshow {
+            position: relative;
+            height: 400px;
+            margin: 20px auto;
+            overflow: hidden;
+          }
+          .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            height: 400px;
+            transition: all 0.5s ease-in-out;
+          }
+        
+          .slideshow .active {
+            z-index: 2;
+            opacity: 1;
+          }
+        
+          .slideshow .prev,
+          .slideshow .next {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            z-index: 3;
+          }
+        
+          .slideshow .prev:hover,
+          .slideshow .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        
+          .slideshow .prev {
+            left: 0;
+          }
+        
+          .slideshow .next {
+            right: 0;
+          }
+        
+          .slideshow .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            text-align: center;
+          }
+    </style>    
+    </head>
+    <body>
+        <link rel="stylesheet" href="style.css">
+        <div class="container">
+        <header class="header">
+            <div class="header-title">Jackson Zilles</div>
+            <div class="header-links">
+                <style>
+                    a {
+                     text-decoration: none;
+                     margin: 0 10px;
+                    font-family: 'Courier New', Courier, monospace;
+                     font-weight: 20;
+                     color: black;
+                    }
+                </style>
+              <a href="/index.html">Projects</a>
+              <a href="/design.html">Design</a>
+              <a href="/about.html">About</a>
+            </div>
+          </header>
+          <hr>
+          <h1 style="text-align: center;">DFF (Design For Fun)</h1>
+          <p>This is a series of designs done for enjoyment, experience, and experiments. 
+            Sometimes I take products and try functional changes, aesthetic changes, or just things I 
+            find funny. Sometimes I'm just making art or trying a new software. I place down every "dumb" 
+            idea I have and, in the end, I usually end up with some interesting designs.</p>
+          
+          <!--POST Outline
+          <div class="post">
+            <h2>Post Title 1</h2>
+          <div class="slideshow x-slideshow">
+            <img src="image.jpg" alt="Image 1" class="active">
+            <img src="image.jpg" alt="Image 2">
+            <img src="image.jpg" alt="Image 3">
+            <img src="image.jpg" alt="Image 4">
+            <img src="image.jpg" alt="Image 5">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+              <div class="description"></div>
+          </div>
+            <p>Description</p>
+          </div>
+          -->
+          <div class="post">
+            <h2>Kinetic Origami</h2>
+          <div class="slideshow origami-slideshow">
+            <img src="images/design/origami1.jpeg" alt="Image 1" class="active">
+            <img src="images/design/origami2.jpeg" alt="Image 2">
+            <img src="images/design/origami3.jpeg" alt="Image 3">
+            <img src="images/design/origami4.jpeg" alt="Image 4">
+            <img src="images/design/origami5.jpeg" alt="Image 5">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+              <div class="description"></div>
+          </div>
+            <p>A shell shaped origami piece, folded with 3 distinct types of lines from a rectangular 
+              paper. The design, by being placed diagonally and actuating two opposing corners, is 
+              able to “breathe” as the corners are pushed and pulled. Run by a microcontroller, moved by
+              a dual rack and pinion system, parts made from cardboard, paper, laser-cut wood, and 3D printed
+              plastic.<br>
+              Video: <a href="https://youtu.be/2X_GS3rNbkg" target="_blank">https://youtu.be/2X_GS3rNbkg</a></p>
+          </div>
+
+          <div class="post">
+            <h2>Coffee Mug 1/19/23</h2>
+          <div class="slideshow mug-slideshow">
+            <img src="images/design/mug1.jpg" alt="Image 1" class="active">
+            <img src="images/design/mug2.jpg" alt="Image 2">
+            <img src="images/design/mug3.jpg" alt="Image 3">
+            <img src="images/design/mug4.jpg" alt="Image 4">
+            <img src="images/design/mug5.jpg" alt="Image 5">
+            <img src="images/design/mug6.jpg" alt="Image 6">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+              <div class="description"></div>
+          </div>
+            <p>This mug was designed to remove the hastle of the handle. Instead, it takes 
+              inspiration from the cardboard sleeves of to-go coffee. This allows the mug 
+              to be gripped around the center, and the offsetting of the "sleeve" from the 
+              mug prevents rapid heat transfer from the beverage inside.<br><br>
+              This mug could still be made out of ceramic, in a similar process to current 
+              methods. The base cup is formed the same way. Then, spacers are cut out of 
+              the clay and places in six locations, one above another at 3 equally spaced locations. 
+              The sleeve is rolled out and cut, then wrapped around the spacers. The mug can then 
+              be fired.</p>
+          </div>
+
+          <div class="post">
+            <h2>Lamp (11/23/22)</h2>
+            <div class="slideshow lamp-slideshow">
+            <img src="images/design/lamp1.jpg" alt="Image 1" class="active">
+            <img src="images/design/lamp2.jpg" alt="Image 2">
+            <img src="images/design/lamp3.jpg" alt="Image 3">
+            <img src="images/design/lamp4.jpg" alt="Image 4">
+            <img src="images/design/lamp5.jpg" alt="Image 5">
+            <img src="images/design/lamp6.jpg" alt="Image 6">
+            <img src="images/design/lamp7.jpg" alt="Image 7">
+            <img src="images/design/lamp8.jpg" alt="Image 8">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+              <div class="description"></div>
+          </div>
+            <p>This lamp was designed to be key operated. The focus is on the twisting action 
+              to turn on the lamp, as well as the ability of the owner to remove the key, 
+              giving them exclusive access to the lamp. It has been designed as a rugged item, 
+              meant for long term use, but it maintains a beautiful design.<br><br>
+              Other than the key slot in the front, the lamp has three centers of rotation. 
+              All of the struts are held together by pins, with the power cable able to pass through 
+              their centers. The head of the lamp is also able to rotate around the last strut, allowing 
+              the lamp to be pointed in any direction.
+            </p>
+          </div>
+
+          <div class="post">
+            <h2>Hot Glue Gun (11/16/22)</h2>
+            <div class="slideshow glue-slideshow">
+            <img src="images/design/glue1.jpg" alt="Image 1" class="active">
+            <img src="images/design/glue2.jpg" alt="Image 2">
+            <img src="images/design/glue3.jpg" alt="Image 3">
+            <img src="images/design/glue4.jpg" alt="Image 4">
+            <img src="images/design/glue5.jpg" alt="Image 5">
+            <img src="images/design/glue6.jpg" alt="Image 6">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+              <div class="description"></div>
+          </div>
+            <p>This hot glue gun was designed to fold for easier storage and transport, 
+              as well as for cooling. By folding it in  half and resting it on it's bottom 
+              side, the tip can cool without worry of it touching the surface it is resting on. 
+              It is imagined to be made of a glossy, dark metal, and is designed for looks as 
+              well as practicality.<br><br>
+              The trigger and on/off switch have been designed to fit into the top half when folded, 
+              fitting around the barrel for the glue stick. The trigger also fits into the bottom half 
+              when squeezed. At the base, a port has been hollowed out for a power cord.</p>
+          </div>
+
+          <script>
+            const slideshows = document.querySelectorAll(".slideshow");
+           slideshows.forEach((slideshow) => {
+             const images = slideshow.querySelectorAll("img");
+             const prev = slideshow.querySelector(".prev");
+             const next = slideshow.querySelector(".next");
+             const description = slideshow.querySelector(".description");
+             let current = 0;
+           
+             function updateSlideshowSize() {
+               const activeImage = images[current];
+               const aspectRatio = activeImage.width / activeImage.height;
+               const width = aspectRatio * 400;
+               slideshow.style.width = `${width}px`;
+             }
+           
+             prev.addEventListener("click", function() {
+               images[current].classList.remove("active");
+               current--;
+               if (current < 0) {
+                 current = images.length - 1;
+               }
+               images[current].classList.add("active");
+               description.innerHTML = images[current].alt;
+               updateSlideshowSize();
+             });
+           
+             next.addEventListener("click", function() {
+               images[current].classList.remove("active");
+               current++;
+               if (current >= images.length) {
+                 current = 0;
+               }
+               images[current].classList.add("active");
+               description.innerHTML = images[current].alt;
+               updateSlideshowSize();
+             });
+           
+             window.addEventListener("load", updateSlideshowSize);
+             window.addEventListener("resize", updateSlideshowSize);
+           });
+           </script>
+          <hr>
+        </body>
+    <footer>
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+            <ul>
+              <li><h3><a>&copy; Jackson Zilles 2023</a></h3></li>
+            </ul>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
+              <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>  
+</div>
+</html>
