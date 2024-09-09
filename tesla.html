@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JMZ Boeing Design</title>
+    <title>JMZ Tesla</title>
     <style>
       .slideshow {
         position: relative;
-        height: 600px;
+        height: 400px;
         margin: 20px auto;
         overflow: hidden;
       }
@@ -15,7 +15,7 @@
         top: 0;
         left: 0;
         object-fit: contain;
-        height: 600px;
+        height: 400px;
         transition: all 0.5s ease-in-out;
       }
 
@@ -89,29 +89,50 @@
         </div>
       </header>
       <hr>
-      <h2>Boeing Design Competition</h2>
-      <p>First prize in the CADathon design competition put on by Boeing and Berkeley ASME (American Society of 
-        Mechanical Engineers). My partner, Meta Zhou, and I competed in the advanced division 
-        where our challenge was: design a solution meant to be an airline implementation that 
-        will stow luggage for all passengers on the plane.
+      <h2>Tesla</h2>
+      <p>From January to August 2024, I completed an internship at Tesla doing mechanical design for the 
+        Seating Engineering team. I primarily worked on design and prototyping for the Model 3 performance 
+        seats and Model S sports seats, which were both released during my internship period.
       </p>
     <div class="slideshow">
-      <img src="images/boeing/boeing_1.png" alt="Image 1" class="active">
-      <img src="images/boeing/boeing_1a.png" alt="Image 2">
-      <img src="images/boeing/boeing_1b.png" alt="Image 3">
-      <img src="images/boeing/boeing_2.jpeg" alt="Image 4">
-      <img src="images/boeing/boeing_3.jpeg" alt="Image 5">
-      <img src="images/boeing/boeing_4.png" alt="Image 6">
-      <img src="images/boeing/boeing_5.png" alt="Image 7">
-      <img src="images/boeing/boeing_6.png" alt="Image 8">
-      <img src="images/boeing/boeing_7.png" alt="Image 9">
+      <img src="images/tesla/tesla2.jpg" alt="Image 1" class="active">
+      <img src="images/tesla/tesla3.jpg" alt="Image 2">
+      <img src="images/tesla/tesla4.jpg" alt="Image 3">
+      <img src="images/tesla/tesla5.jpg" alt="Image 4">
+      <img src="images/tesla/tesla6.jpg" alt="Image 5">
+      <img src="images/tesla/tesla7.jpg" alt="Image 6">
+      <img src="images/tesla/tesla8.jpg" alt="Image 7">
+      <img src="images/tesla/tesla9.jpg" alt="Image 8">
       <div class="prev">&#10094;</div>
       <div class="next">&#10095;</div>
       <div class="description">x</div>
     </div>
-    <div style="text-align: center; font-size: 30px;">
-        <a href="files/boeing.pdf" target="_blank">View Project Report</a>
-      </div>
+    <h2>Primary Projects</h2>
+      <p>Redesigned internal tool, designed housing using CATIA and PCB in KiCad, optimized 
+        for cost and ease of assembly, collaborated with suppliers, resulting in an 82% cost 
+        down and a 90% assembly time decrease. <br><br>
+        Designed, prototyped, and presented to executives an industry-first mechanism for seat 
+        adjustability to increase performance capabilities, including pneumatic-controlled air 
+        cells and resistive switch control. <br><br>
+        Discovered, modified, and implemented a supplier part change creating an annual cost 
+        savings of over $10k <br><br>
+        Designed, validated, and released production parts for Model 3 and Model S performance 
+        seating systems.</p>
+    <h2>Other Projects</h2>
+      <p>
+        Worked on a number of vehicle platforms, including Model 3/Y, Model S/X, Semi Truck, and future programs. <br><br>
+        Designed custom test fixtures and ran a wide range of tests, varying from quick validation to weeks long performance testing. <br><br>
+        Completed line-side investigations for manufacturing defects, made modification, and worked with suppliers to resolve. <br><br>
+        Organized and performed comfort evaluations, including the use of pressure mapping. <br><br>
+        Frequently utilized rapid prototyping to make representative models for reviews and testing. <br><br>
+        Reworked parts for production vehicles and made design changes and suggestions based on reworks.<br><br>
+        Created rework instructions for associates, demonstrated, observed, and modified to improve rework time and quality. <br><br>
+        Analysis and resolution of high-priority safety issue via testing and supplier communication.
+      </p>
+    <h2>Skills/Softwares</h2>
+        <p>
+          CATIA  |  3D Experience  |  PLM Software  |  Jira  |  PCB Design  |  Mechanical Design  |  Prototyping  |  Pneumatics  |  many more...
+        </p>
     <script>
       const slideshow = document.querySelector(".slideshow");
       const images = document.querySelectorAll(".slideshow img");
@@ -123,7 +144,7 @@
       function updateSlideshowSize() {
         const activeImage = images[current];
         const aspectRatio = activeImage.width / activeImage.height;
-        const width = aspectRatio * 600;
+        const width = aspectRatio * 400;
         slideshow.style.width = `${width}px`;
       }
 
