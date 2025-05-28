@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JMZ Medical Device</title>
+    <title>JMZ Surge</title>
     <style>
       .slideshow {
         position: relative;
-        height: 600px;
+        height: 400px;
         margin: 20px auto;
         overflow: hidden;
       }
@@ -15,7 +15,7 @@
         top: 0;
         left: 0;
         object-fit: contain;
-        height: 600px;
+        height: 400px;
         transition: all 0.5s ease-in-out;
       }
 
@@ -89,51 +89,47 @@
         </div>
       </header>
       <hr>
-      <h2>Medical Device - Arch Day Design</h2>
-      <p>This is a project I worked on with engineering consulting company 
-        in Ventura, CA. The company does mostly medical device design for 
-        industry clients. This was my first experience with this type of 
-        engineering, and since then I have been very interested in working 
-        on designing to improve human lives.
+      <h2>Surge Electric Motorcycle</h2>
+      <p>I've always been drawn to motorcycles. I finally got my license in 2022, and immediately wanted to 
+        build my own bike. I had never been too interested in the collegiate car competition teams (Formula Electric 
+        and Formula SAE), but then I found Formula Lightning - a collegiate electric motorcycle competition. That's 
+        when I founded Surge - Electric Motorcycles at Berkeley, Berkeley's first electric motorcycle club and competition team.
       </p>
     <div class="slideshow">
-      <img src="images/arch/arch1.jpg" alt="Image 1" class="active">
-      <img src="images/arch/arch2.jpg" alt="Image 2">
-      <img src="images/arch/arch4.jpg" alt="Image 4">
-      <img src="images/arch/arch5.jpg" alt="Image 5">
-      <img src="images/arch/arch6.jpg" alt="Image 6">
+      <img src="images/surge/surge1.png" alt="Image 1" class="active">
+      <img src="images/surge/surge2.JPG" alt="Image 2">
+      <img src="images/surge/surge3.PNG" alt="Image 3">
+      <img src="images/surge/surge4.jpeg" alt="Image 4">
+      <img src="images/surge/surge5.jpeg" alt="Image 5">
+      <img src="images/surge/surge6.jpeg" alt="Image 6">
       <div class="prev">&#10094;</div>
       <div class="next">&#10095;</div>
       <div class="description">x</div>
     </div>
-    <h2>Background</h2>
-    <p>Arch Day Design hired me to work as a manufacturing and quality engineer 
-      for their regulated medical device project. The product was a cup for people 
-      with disabilities that impacted swallowing liquids. The cup would dispense 
-      a set amount of liquid, usually 5 or 10cc. This was a redesign for a company 
-      that has a similar product, but wanted an updated model that would allow users 
-      to be less self-conscious about needing the device by disguising the internal 
-      workings. By hiring me, Arch Day was able to save their client thousands of 
-      dollars, as I was capable of providing the necessary 3D printed models at a 
-      fraction of the price that Arch Day could.</p>
-  <h2>Design</h2>
-      <p>While I was not in a lead design role for this project, I suggested changes 
-        for ease of manufacturing, which, at the time, was FDM 3D printing. I worked 
-        with the owner of Arch Day on positioning of the handle, as well as debossing 
-        the text on the lid, and others.</p>
-    <h2>Manufacturing</h2>
-        <p>As the head of manufacturing during the prototyping phase, I was in charge 
-          of 3D printing all of our models and helping ship them across the US to the 
-          rest of the team. I worked with my two personal FDM 3D printers to quickly 
-          turn around the models, running my printers constantly. With every variation, 
-          I optimized the slicing process to improve print speed, quality, and 
-          impermeability. Each model was printed in two parts, the lid and the cup, 
-          with each of these prints requiring custom supports to be feasibly printed. 
-          <br><br>This project, and working for Arch Day, was the single most educational 
-          engineering experience I had up to that point. It greatly furthered my 
-          understanding of design and manufacturing, and improved my CAD, slicing, and 
-          3D printing skills. Most importantly, I felt good knowing that my work was a 
-          direct factor in helping people.</p>
+    <h2>Design and Build</h2>
+      <p>Surge started with a 2004 Honda CBR600RR, purchased for cheap with a blown motor. After disassembling, we kept the frame, 
+        forks, swing arm, wheels, and brakes to use on our first electric conversion. <br><br>
+        We purchased an 8000W electric motor and began work on a custom battery pack. We started our mechanical design efforts 
+        by hand-measuring the frame and attachment points, but eventually 3D scanned the frame to get more accurate points. 
+        We designed a custom motor mount and subcage which bolted into the existing bolt holes on the frame, while appropriately 
+        supporting the weight of the motor and keeping it centered. We also designed a battery enclosure which connected through the subcage. <br><br>
+        Our custom battery was designed for speed and low-cost. We used 21700 Molicel battery cells, spot welding a 26s4p battery. 
+        We calculated an expected top speed of just over 100mph based on this pack and our motor. We knew that our range would be 
+        very limited, but based on our non-existant budget we decided to prioritize hitting high speeds. <br><br>
+        We assembled the battery (including one mishap and near explosion), water jet our custom aluminum parts for the subcage, 
+        and spray painted the fairings for our super-cool all black look. We are beginning our testing in June 2025!</p>
+    <h2>Lessons Learned</h2>
+      <p>
+        Building the right team will yield the best results. <br><br>
+        Battery packs are to be handled with care at all times. <br><br>
+        Recognize and account for differences in material properties of prototypes and production parts. <br><br>
+        Chasing perfection yields no results. Try, then iterate. <br><br>
+        It will never happen if you don't do it. Failing is better than never starting.
+      </p>
+    <h2>Skills/Softwares</h2>
+        <p>
+          Onshape  |  3D Scanning  |  Water Jet  |  Battery Design  |  Mechanical Design  |  FEA  |  Prototyping  |  many more...
+        </p>
     <script>
       const slideshow = document.querySelector(".slideshow");
       const images = document.querySelectorAll(".slideshow img");
@@ -145,7 +141,7 @@
       function updateSlideshowSize() {
         const activeImage = images[current];
         const aspectRatio = activeImage.width / activeImage.height;
-        const width = aspectRatio * 600;
+        const width = aspectRatio * 400;
         slideshow.style.width = `${width}px`;
       }
 
