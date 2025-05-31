@@ -3,64 +3,23 @@
   <head>
     <title>JMZ Tesla</title>
     <style>
-      .slideshow {
-        position: relative;
-        height: 400px;
-        margin: 20px auto;
-        overflow: hidden;
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
       }
 
-      .slideshow img {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .image-gallery img {
+        max-width: 90%;
+        height: auto;
+        max-height: 400px;
         object-fit: contain;
-        height: 400px;
-        transition: all 0.5s ease-in-out;
+        border: 1px solid #ccc;
+        border-radius: 8px;
       }
-
-      .slideshow .active {
-        z-index: 2;
-        opacity: 1;
-      }
-
-      .slideshow .prev,
-      .slideshow .next {
-        position: absolute;
-        top: 50%;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 30px;
-        line-height: 50px;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-        z-index: 3;
-      }
-
-      .slideshow .prev:hover,
-      .slideshow .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      .slideshow .prev {
-        left: 0;
-      }
-
-      .slideshow .next {
-        right: 0;
-      }
-
-      .slideshow .description {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        padding: 10px;
+      h1 {
         text-align: center;
       }
       h2 {
@@ -89,105 +48,107 @@
         </div>
       </header>
       <hr>
-      <h2>Tesla</h2>
-      <p>From January to August 2024, I completed an internship at Tesla doing mechanical design for the 
+
+      <h1>Tesla</h1>
+      <p>
+        From January to August 2024, I completed an internship at Tesla doing mechanical design for the 
         Seating Engineering team. I primarily worked on design and prototyping for the Model 3 performance 
         seats and Model S sports seats, which were both released during my internship period.
       </p>
-    <div class="slideshow">
-      <img src="images/tesla/tesla2.jpg" alt="Image 1" class="active">
-      <img src="images/tesla/tesla3.jpg" alt="Image 2">
-      <img src="images/tesla/tesla4.jpg" alt="Image 3">
-      <img src="images/tesla/tesla5.jpg" alt="Image 4">
-      <img src="images/tesla/tesla6.jpg" alt="Image 5">
-      <img src="images/tesla/tesla7.jpg" alt="Image 6">
-      <img src="images/tesla/tesla8.jpg" alt="Image 7">
-      <img src="images/tesla/tesla9.jpg" alt="Image 8">
-      <div class="prev">&#10094;</div>
-      <div class="next">&#10095;</div>
-      <div class="description">x</div>
-    </div>
-    <h2>Primary Projects</h2>
-      <p>Redesigned internal tool, designed housing using CATIA and PCB in KiCad, optimized 
+      <h2>Skills/Softwares</h2>
+      <p>
+        CATIA  |  3D Experience  |  PLM Software  |  Jira  |  PCB Design  |  Mechanical Design  |  
+        Prototyping  |  Pneumatics  |  many more...
+      </p>
+
+      <div class="image-gallery">
+        <img src="images/tesla/tesla01.jpg" alt="Tesla 1">
+        <img src="images/tesla/tesla05.jpg" alt="Tesla 2">
+      </div>
+
+      <h2>Primary Projects</h2>
+      <p>
+        Redesigned internal tool, designed housing using CATIA and PCB in KiCad, optimized 
         for cost and ease of assembly, collaborated with suppliers, resulting in an 82% cost 
         down and a 90% assembly time decrease. <br><br>
         Designed, prototyped, and presented to executives an industry-first mechanism for seat 
         adjustability to increase performance capabilities, including pneumatic-controlled air 
         cells and resistive switch control. <br><br>
-        Discovered, modified, and implemented a supplier part change creating an annual cost 
-        savings of over $10k <br><br>
+        </p>
+        <div class="image-gallery">
+          <img src="images/tesla/tesla2.jpg" alt="Tesla 3">
+        </div>
+        <br>
+        <p>
         Designed, validated, and released production parts for Model 3 and Model S performance 
-        seating systems.</p>
-    <h2>Other Projects</h2>
+        seating systems. <br><br>
+      </p>
+        <div class="image-gallery">
+          <img src="images/tesla/tesla3.jpg" alt="Tesla 4">
+        </div>
+        <br>
+        <p>
+        Discovered, modified, and implemented a supplier part change creating an annual cost 
+        savings of over $10k. <br><br>
+      </p>
+        <div class="image-gallery">
+          <img src="images/tesla/tesla35.jpg" alt="Tesla 5">
+        </div>
+      </p>
+
+      <h2>Other Projects</h2>
       <p>
         Worked on a number of vehicle platforms, including Model 3/Y, Model S/X, Semi Truck, and future programs. <br><br>
-        Designed custom test fixtures and ran a wide range of tests, varying from quick validation to weeks long performance testing. <br><br>
-        Completed line-side investigations for manufacturing defects, made modification, and worked with suppliers to resolve. <br><br>
+        Designed custom test fixtures and ran a wide range of tests, varying from quick validation to weeks-long performance testing. <br><br>
         Organized and performed comfort evaluations, including the use of pressure mapping. <br><br>
-        Frequently utilized rapid prototyping to make representative models for reviews and testing. <br><br>
-        Reworked parts for production vehicles and made design changes and suggestions based on reworks.<br><br>
-        Created rework instructions for associates, demonstrated, observed, and modified to improve rework time and quality. <br><br>
-        Analysis and resolution of high-priority safety issue via testing and supplier communication.
-      </p>
-    <h2>Skills/Softwares</h2>
-        <p>
-          CATIA  |  3D Experience  |  PLM Software  |  Jira  |  PCB Design  |  Mechanical Design  |  Prototyping  |  Pneumatics  |  many more...
         </p>
-    <script>
-      const slideshow = document.querySelector(".slideshow");
-      const images = document.querySelectorAll(".slideshow img");
-      const prev = document.querySelector(".slideshow .prev");
-      const next = document.querySelector(".slideshow .next");
-      const description = document.querySelector(".slideshow .description");
-      let current = 0;
+        <div class="image-gallery">
+          <img src="images/tesla/tesla5.jpg" alt="Tesla 6">
+        </div>
+        <br>
+        <p>
+        Completed line-side investigations for manufacturing defects, made modifications, and worked with suppliers to resolve. <br><br>
+        Frequently utilized rapid prototyping to make representative models for reviews and testing. <br><br>
+        Reworked parts for production vehicles and made design changes and suggestions based on reworks. <br><br>
+        Created rework instructions for associates, demonstrated, observed, and modified to improve rework time and quality. <br><br>
+        Analysis and resolution of high-priority safety issue via testing and supplier communication.<br><br>
+        </p>
+        <div class="image-gallery">
+          <img src="images/tesla/tesla4.jpg" alt="Tesla 7">
+        </div>
+      </p>
 
-      function updateSlideshowSize() {
-        const activeImage = images[current];
-        const aspectRatio = activeImage.width / activeImage.height;
-        const width = aspectRatio * 400;
-        slideshow.style.width = `${width}px`;
-      }
-
-      prev.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current--;
-        if (current < 0) {
-          current = images.length - 1;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      next.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current++;
-        if (current >= images.length) {
-          current = 0;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      window.addEventListener("load", updateSlideshowSize);
-      window.addEventListener("resize", updateSlideshowSize);
-    </script>
-    <hr>
-  </body>
-  <footer>
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
-        <ul>
-          <li><h3><a>&copy; Jackson Zilles 2024</a></h3></li>
-        </ul>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;"><!--<span class="label">LinkedIn</span>--></a></li>
-          <li><a href="mailto:jmzilles@berkeley.edu"><img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;"><!--<span class="label">Email</span>--></a></li>
-        </ul>
+    
+      <h2>Team and Memories</h2>
+      <div class="image-gallery">
+        <img src="images/tesla/tesla6.jpg" alt="Tesla 8">
+        <img src="images/tesla/tesla7.jpg" alt="Tesla 9">
+        <img src="images/tesla/tesla8.jpg" alt="Tesla 10">
+        <img src="images/tesla/tesla9.jpg" alt="Tesla 11">
       </div>
+      <hr>
     </div>
-  </footer>  
-</div>
-</html>
 
+    <footer>
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 50px;">
+          <ul>
+            <li><h3><a>&copy; Jackson Zilles 2024</a></h3></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/jackson-zilles/" target="_blank">
+                <img src="images/icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jmzilles@berkeley.edu">
+                <img src="images/icons/mail.png" alt="Email" style="width: 30px; height: 30px;">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>  
+  </body>
+</html>

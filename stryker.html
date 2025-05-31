@@ -3,64 +3,23 @@
   <head>
     <title>JMZ Stryker</title>
     <style>
-      .slideshow {
-        position: relative;
-        height: 600px;
-        margin: 20px auto;
-        overflow: hidden;
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
       }
 
-      .slideshow img {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .image-gallery img {
+        max-width: 90%;
+        height: auto;
+        max-height: 400px;
         object-fit: contain;
-        height: 600px;
-        transition: all 0.5s ease-in-out;
+        border: 1px solid #ccc;
+        border-radius: 8px;
       }
-
-      .slideshow .active {
-        z-index: 2;
-        opacity: 1;
-      }
-
-      .slideshow .prev,
-      .slideshow .next {
-        position: absolute;
-        top: 50%;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 30px;
-        line-height: 50px;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-        z-index: 3;
-      }
-
-      .slideshow .prev:hover,
-      .slideshow .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      .slideshow .prev {
-        left: 0;
-      }
-
-      .slideshow .next {
-        right: 0;
-      }
-
-      .slideshow .description {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        padding: 10px;
+      h1 {
         text-align: center;
       }
       h2 {
@@ -89,7 +48,7 @@
         </div>
       </header>
       <hr>
-      <h2>Stryker</h2>
+      <h1>Stryker</h1>
       <p>In the summer of 2023, I completed an internship with Stryker Sports Medicine in 
         San Jose, CA as an R&D intern. I had the opportunity to work on the designing, 
         prototyping, and testing processes of multiple surgical devices in all stages of 
@@ -100,16 +59,10 @@
         Solidworks and Solidworks PDM to create complex CAD files and assemblies, and working 
         with both legacy and new designs.
       </p>
-    <div class="slideshow">
-      <img src="images/stryker/stryker2.jpeg" alt="Image 1" class="active">
-      <img src="images/stryker/stryker3.jpg" alt="Image 2">
-      <img src="images/stryker/stryker4.jpg" alt="Image 3">
-      <img src="images/stryker/stryker5.jpg" alt="Image 4">
-      <div class="prev">&#10094;</div>
-      <div class="next">&#10095;</div>
-      <div class="description">x</div>
-    </div>
-    <p style="text-align: center;">Images above include Stryker products</p>
+      <div class="image-gallery">
+        <img src="images/stryker/stryker0.png" alt="Stryker Image 1">
+      </div>
+      
     <h2>Projects Summary</h2>
     <p>Over three months, I worked primarily on four projects, two of which were 
       centered on new product design. The first was a snap-on fixture that could be optionally 
@@ -121,6 +74,9 @@
       of development, getting ready for release, and the other was a product in the early stages, 
       starting testing.</p>
   <h2>Product Design</h2>
+  <div class="image-gallery">
+    <img src="images/stryker/stryker15.jpeg" alt="Stryker Image 2">
+  </div><br>
       <p><i>Snap-on Fixture</i></p>
       <p>As a medical devices company, Stryker is always innovating and iterating 
         their surgical tools based on new research, new surgeon needs, and new technologies, all 
@@ -136,6 +92,9 @@
         I designed began usage for the testing process that the product is undergoing. This fixture will 
         allow the product to have expanded use cases and increased safety. 
       </p>  
+      <div class="image-gallery">
+        <img src="images/stryker/stryker2.jpeg" alt="Stryker Image 3">
+      </div><br>
       <p><i>New Surgical Device</i></p>
       <p>As previously stated, Stryker is constantly developing new products to improve performance and 
         fill gaps in existing product lines. Stryker was looking to expand one of these product lines 
@@ -156,6 +115,9 @@
         modifications before this product reaches the market. However, the first steps are complete and due 
         to the need for this product, it will likely hit the market in the upcoming years.</p>
   <h2>Product Development Testing</h2>
+  <div class="image-gallery">
+    <img src="images/stryker/stryker3.jpeg" alt="Stryker Image 4">
+  </div><br>
       <p><i>Near Market</i></p>
       <p>An updated product of one of Stryker’s more important lines is nearing release, and some final 
         testing still needed to be done. Over the course of my internship, I spent hours assembling these 
@@ -170,6 +132,9 @@
         recorded and compiled with all test data from the product and affected design changes and product 
         specifications.
       </p>  
+      <div class="image-gallery">
+        <img src="images/stryker/stryker4.jpg" alt="Stryker Image 5">
+      </div><br>
       <p><i>Early Development</i></p>
       <p>I led the first rounds of material testing for a new product in early development. After 
         receiving samples of the product in two different materials, I used the spec. sheet to check 
@@ -189,46 +154,7 @@
             grateful to my team for their help throughout my internship and the friendships I made. My 
             favorite project was designing a new surgical device from the ground up and I enjoyed every 
             failure and learning experience along the way.</p>
-    <script>
-      const slideshow = document.querySelector(".slideshow");
-      const images = document.querySelectorAll(".slideshow img");
-      const prev = document.querySelector(".slideshow .prev");
-      const next = document.querySelector(".slideshow .next");
-      const description = document.querySelector(".slideshow .description");
-      let current = 0;
-
-      function updateSlideshowSize() {
-        const activeImage = images[current];
-        const aspectRatio = activeImage.width / activeImage.height;
-        const width = aspectRatio * 600;
-        slideshow.style.width = `${width}px`;
-      }
-
-      prev.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current--;
-        if (current < 0) {
-          current = images.length - 1;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      next.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current++;
-        if (current >= images.length) {
-          current = 0;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      window.addEventListener("load", updateSlideshowSize);
-      window.addEventListener("resize", updateSlideshowSize);
-    </script>
+   
     <hr>
   </body>
   <footer>

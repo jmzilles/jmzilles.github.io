@@ -3,64 +3,23 @@
   <head>
     <title>JMZ Surge</title>
     <style>
-      .slideshow {
-        position: relative;
-        height: 400px;
-        margin: 20px auto;
-        overflow: hidden;
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
       }
 
-      .slideshow img {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .image-gallery img {
+        max-width: 90%;
+        height: auto;
+        max-height: 400px;
         object-fit: contain;
-        height: 400px;
-        transition: all 0.5s ease-in-out;
+        border: 1px solid #ccc;
+        border-radius: 8px;
       }
-
-      .slideshow .active {
-        z-index: 2;
-        opacity: 1;
-      }
-
-      .slideshow .prev,
-      .slideshow .next {
-        position: absolute;
-        top: 50%;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 30px;
-        line-height: 50px;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-        z-index: 3;
-      }
-
-      .slideshow .prev:hover,
-      .slideshow .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      .slideshow .prev {
-        left: 0;
-      }
-
-      .slideshow .next {
-        right: 0;
-      }
-
-      .slideshow .description {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        padding: 10px;
+      h1 {
         text-align: center;
       }
       h2 {
@@ -89,35 +48,46 @@
         </div>
       </header>
       <hr>
-      <h2>Surge Electric Motorcycle</h2>
+      <h1>Surge Electric Motorcycle</h1>
       <p>I've always been drawn to motorcycles. I finally got my license in 2022, and immediately wanted to 
         build my own bike. I had never been too interested in the collegiate car competition teams (Formula Electric 
-        and Formula SAE), but then I found Formula Lightning - a collegiate electric motorcycle competition. That's 
-        when I founded Surge - Electric Motorcycles at Berkeley, Berkeley's first electric motorcycle club and competition team.
+        and Formula SAE), but then I found Formula Lightning - a collegiate electric motorcycle competition. In the fall of 2024,
+         I founded Surge - Electric Motorcycles at Berkeley, Berkeley's first electric motorcycle club and competition team.
       </p>
-    <div class="slideshow">
-      <img src="images/surge/surge1.png" alt="Image 1" class="active">
-      <img src="images/surge/surge2.JPG" alt="Image 2">
-      <img src="images/surge/surge3.PNG" alt="Image 3">
-      <img src="images/surge/surge4.jpeg" alt="Image 4">
-      <img src="images/surge/surge5.jpeg" alt="Image 5">
-      <img src="images/surge/surge6.jpeg" alt="Image 6">
-      <div class="prev">&#10094;</div>
-      <div class="next">&#10095;</div>
-      <div class="description">x</div>
-    </div>
+      <h2>Skills/Softwares</h2>
+      <p>
+        Onshape  |  3D Scanning  |  Water Jet  |  Battery Design  |  Mechanical Design  |  FEA  |  Prototyping  |  many more...
+      </p>
+      <div class="image-gallery">
+        <img src="images/surge/surge1.png" alt="Surge Image 1">
+      </div>
+      
     <h2>Design and Build</h2>
       <p>Surge started with a 2004 Honda CBR600RR, purchased for cheap with a blown motor. After disassembling, we kept the frame, 
-        forks, swing arm, wheels, and brakes to use on our first electric conversion. <br><br>
+        forks, swing arm, wheels, and brakes to use on our first electric conversion. <br><br></p>
+        <div class="image-gallery">
+          <img src="images/surge/surge2.JPG" alt="Surge Image 2">
+        </div><br>
+        <p>
         We purchased an 8000W electric motor and began work on a custom battery pack. We started our mechanical design efforts 
         by hand-measuring the frame and attachment points, but eventually 3D scanned the frame to get more accurate points. 
         We designed a custom motor mount and subcage which bolted into the existing bolt holes on the frame, while appropriately 
-        supporting the weight of the motor and keeping it centered. We also designed a battery enclosure which connected through the subcage. <br><br>
+        supporting the weight of the motor and keeping it centered. We also designed a battery enclosure which connected through the subcage. <br><br></p>
+        <div class="image-gallery">
+          <img src="images/surge/surge3.PNG" alt="Surge Image 3">
+        </div><br><p>
         Our custom battery was designed for speed and low-cost. We used 21700 Molicel battery cells, spot welding a 26s4p battery. 
         We calculated an expected top speed of just over 100mph based on this pack and our motor. We knew that our range would be 
-        very limited, but based on our non-existant budget we decided to prioritize hitting high speeds. <br><br>
+        very limited, but based on our non-existant budget we decided to prioritize hitting high speeds. <br><br></p>
+        <div class="image-gallery">
+          <img src="images/surge/surge4.jpeg" alt="Surge Image 4">
+        </div><br><p>
         We assembled the battery (including one mishap and near explosion), water jet our custom aluminum parts for the subcage, 
         and spray painted the fairings for our super-cool all black look. We are beginning our testing in June 2025!</p>
+        <div class="image-gallery">
+          <img src="images/surge/surge5.jpeg" alt="Surge Image 5">
+          <img src="images/surge/surge6.jpeg" alt="Surge Image 6">
+        </div>
     <h2>Lessons Learned</h2>
       <p>
         Building the right team will yield the best results. <br><br>
@@ -126,50 +96,8 @@
         Chasing perfection yields no results. Try, then iterate. <br><br>
         It will never happen if you don't do it. Failing is better than never starting.
       </p>
-    <h2>Skills/Softwares</h2>
-        <p>
-          Onshape  |  3D Scanning  |  Water Jet  |  Battery Design  |  Mechanical Design  |  FEA  |  Prototyping  |  many more...
-        </p>
-    <script>
-      const slideshow = document.querySelector(".slideshow");
-      const images = document.querySelectorAll(".slideshow img");
-      const prev = document.querySelector(".slideshow .prev");
-      const next = document.querySelector(".slideshow .next");
-      const description = document.querySelector(".slideshow .description");
-      let current = 0;
 
-      function updateSlideshowSize() {
-        const activeImage = images[current];
-        const aspectRatio = activeImage.width / activeImage.height;
-        const width = aspectRatio * 400;
-        slideshow.style.width = `${width}px`;
-      }
-
-      prev.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current--;
-        if (current < 0) {
-          current = images.length - 1;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      next.addEventListener("click", function() {
-        images[current].classList.remove("active");
-        current++;
-        if (current >= images.length) {
-          current = 0;
-        }
-        images[current].classList.add("active");
-        description.innerHTML = images[current].alt;
-        updateSlideshowSize();
-      });
-
-      window.addEventListener("load", updateSlideshowSize);
-      window.addEventListener("resize", updateSlideshowSize);
-    </script>
+    
     <hr>
   </body>
   <footer>
